@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative '../src/actor'
 
-class SpeechTest < MiniTest::Unit::TestCase
+class ActorTest < MiniTest::Unit::TestCase
 	def setup
 		@speech = Casting::Speech.new "Great Title", "Great Text"
 		@actor = Casting::Actor.new :m, 20, @speech
