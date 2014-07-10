@@ -1,7 +1,11 @@
 module Casting
 	class Role
 		def initialize ( gender, range)
-			@gender = gender.to_sym
+			if gender.to_sym[0].downcase == 'm'
+				@gender = :male
+			else
+				@gender = :woman
+			end
 			@range = range
 		end
 		def is_for_man?
@@ -14,7 +18,7 @@ module Casting
 			!person.nil? && (person.gender[0] == @gender[0]) && @range.include?(person.age)
 		end
 		def to_s()
-			"Looking for #{gender.to_s} in #{range} years_old"
+			"Looking for #{@gender.to_s} #{@range.to_s} years_old"
 		end
 	end
 end
