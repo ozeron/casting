@@ -16,6 +16,5 @@ module Casting
 		def to_s()
 			"Looking for #{gender.to_s} in #{range} years_old"
 		end
-	end # !> mismatched indentations at 'end' with 'def' at 16
-end # !> mismatched indentations at 'end' with 'class' at 2
-# ~> -:19: syntax error, unexpected end-of-input, expecting keyword_end
+	end
+end
