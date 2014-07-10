@@ -9,16 +9,16 @@
 Перед использование нужно создать объект класса `Core` и добавить в него массив ролей и суддей, после чего работать с функциями.
 
 ```Ruby
-```require_relative 'src/core'
-```roles = [Casting::Role.new(:male, 20..50)]
-```judjes= [Casting::Judje.new(:woman, 33)]
-```actor= [Casting::Actors.new(:male, 24, "Long Story", "...")]
-```sys = Casting::Core.new judjes, roles
-```(sys.best_role_for actor).to_s
-```=> Looking for male 20..50 years old
-```sys.cast_time actor
-```=> 13
-
+require_relative 'src/core'
+roles = [Casting::Role.new(:male, 20..50)]
+judjes= [Casting::Judje.new(:woman, 33)]
+actor= [Casting::Actors.new(:male, 24, "Long Story", "...")]
+sys = Casting::Core.new judjes, roles
+(sys.best_role_for actor).to_s
+=> Looking for male 20..50 years old
+sys.cast_time actor
+=> 13
+```
 
 ##Задание: Кастинг на роли в театре
 
