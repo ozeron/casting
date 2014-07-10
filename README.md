@@ -1,5 +1,25 @@
 # Casting
 -------------------------------------------
+
+##Использование
+
+Весь код использует модуль `Сasting`
+
+Функции системы выполняються двумя функциями `best_role_for( actor )` и `cast_time( actor )` которые находяться в файле src/core.rb.
+Перед использование нужно создать объект класса `Core` и добавить в него массив ролей и суддей, после чего работать с функциями.
+
+```Ruby
+```require_relative 'src/core'
+```roles = [Casting::Role.new(:male, 20..50)]
+```judjes= [Casting::Judje.new(:woman, 33)]
+```actor= [Casting::Actors.new(:male, 24, "Long Story", "...")]
+```sys = Casting::Core.new judjes, roles
+```(sys.best_role_for actor).to_s
+```=> Looking for male 20..50 years old
+```sys.cast_time actor
+```=> 13
+
+
 ##Задание: Кастинг на роли в театре
 
 
@@ -28,22 +48,7 @@
 - возможность показать наиболее подходящую роль для выступающего (у которой оценка больше остальных)
 - посчитать общую продолжительность выступлений одного человека
 
-##Использование
 
-Весь код использует модуль `Сasting`
-
-Функции системы выполняються двумя функциями `best_role_for( actor )` и `cast_time( actor )` которые находяться в файле src/core.rb.
-Перед использование нужно создать объект класса `Core` и добавить в него массив ролей и суддей, после чего работать с функциями.
-```Ruby
-```require_relative 'src/core'
-```roles = [Casting::Role.new(:male, 20..50)]
-```judjes= [Casting::Judje.new(:woman, 33)]
-```actor= [Casting::Actors.new(:male, 24, "Long Story", "...")]
-```sys = Casting::Core.new judjes, roles
-```(sys.best_role_for actor).to_s
-```=> Looking for male 20..50 years old
-```sys.cast_time actor
-```=> 13
 
 ###TODO:
 - создать модуль Core, функции которого будут принимать списки судей, ролей и актеров
