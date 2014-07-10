@@ -2,7 +2,8 @@ require 'minitest/autorun'
 require_relative '../src/core'
 
 class PersonTest < MiniTest::Unit::TestCase
-	def setup
+	def initialize( arg)
+		super
 		@judjes = [
 			Casting::Judje.new( :man, 24 ),
 			Casting::Judje.new( :man, 30 ),
