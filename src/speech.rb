@@ -9,7 +9,7 @@ module Casting
 			@title.length + @text.length
 		end
 		def to_s
-			"#{@title}\n#{@text}"
+			"'#{@title}'\n#{@text}"
 		end
 	end
 end

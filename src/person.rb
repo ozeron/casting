@@ -13,6 +13,9 @@ module Casting
 		def is_woman?
 			!is_man?
 		end
+		def to_s
+			"#{gender.to_s} in age of #{age}}"
+		end
 	end
 end
 
