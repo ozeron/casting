@@ -9,7 +9,7 @@ module Casting
 			@speech = speech
 		end
 		def to_s
-			super + " with #{speech}"
+			super + " and speech:\n#{speech}"
 		end
 	end
 end

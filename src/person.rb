@@ -14,7 +14,7 @@ module Casting
 			!is_man?
 		end
 		def to_s
-			"#{gender.to_s} in age of #{age}}"
+			"#{gender.to_s.capitalize} in age of #{age}"
 		end
 	end
 end
