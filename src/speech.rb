@@ -9,7 +9,7 @@ module Casting
 			@title.length + @text.length
 		end
 		def to_s
-			"'#{@title}'\n#{@text}"
+			"'#{@title}'|#{@text}"
 		end
 		def ==(other)
 			@title == other.title && @text == other.text
