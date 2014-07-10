@@ -30,4 +30,9 @@ class SpeechTest < MiniTest::Unit::TestCase
 		assert_equal (@text1 + @title1).size, @speech1.length
 		assert_equal (@text2 + @title2).size, @speech2.length
 	end
+	def test_eql?
+		assert @speech1 == Casting::Speech.new(@title1, @text1)
+		assert @speech1.eql?( Casting::Speech.new(@title1, @text1) )
+		assert_equal @speech1, Casting::Speech.new(@title1, @text1)
+	end
 end
