@@ -8,4 +8,10 @@ class PersonTest < MiniTest::Unit::TestCase
  	def test_it_exist  	
    	assert_kind_of Casting::Person, @person
   end
+  def test_gender
+  		assert_equal @person.gender, :male
+  end
+  def is_man?
+  		asser @person.is_man?
+  end
 end
