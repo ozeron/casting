@@ -14,6 +14,6 @@ module Casting
 			!person.nil? && (person.gender[0] == @gender[0]) && @range.include?(person.age)
 		end
 		def to_s()
-			"(#{gender.to_s} in #{range} years_old"
+			"Looking for #{gender.to_s} in #{range} years_old"
 	end
 end
