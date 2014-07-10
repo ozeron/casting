@@ -11,6 +11,11 @@ module Casting
 		def to_s
 			"'#{@title}'\n#{@text}"
 		end
+		def ==(other)
+			@title == other.title && @text == other.text
+		end
+		alias_method :eql?, :==
+		alias_method :size, :length
 	end
 end
 
