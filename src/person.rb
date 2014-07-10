@@ -7,6 +7,12 @@ module Casting
 			@gender = gender
 			@age = age
 		end
+		def is_man?
+			@gender[0] == 'm'
+		end
+		def is_woman?
+			!is_man?
+		end
 	end
 end
 
