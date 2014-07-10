@@ -4,7 +4,11 @@ module Casting
 	class Person
 		attr_reader :age, :gender
 		def initialize( gender, age)
-			@gender = gender
+			if gender.to_sym[0].downcase == 'm'
+				@gender = :male
+			else
+				@gender = :woman
+			end
 			@age = age
 		end
 		def is_man?
